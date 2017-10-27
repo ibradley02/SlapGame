@@ -64,7 +64,7 @@ Students will use javascript in order to interact with the DOM to create a dynam
 
 ### Step 7 - Testing Time
 1. You should now have a functioning application. Test the following
-  - In the panel header you should see an indicator for Health, Name, and Hits; their respective values should be 100, "Whatever Name       You Chose", and 0.
+  - In the panel header you should see an indicator for Health, Name, and Hits; their respective values should be 100, "Whatever Name You Chose", and 0.
   - Click the slap button, you should see the target health drop to 99 and hit count to 1.
   - Click the punch button, you should see the target health drop to 94 and hit count to 2.
   - Finally click the Kick button, you should see the target health drop to 84 and hit count to 3.
