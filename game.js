@@ -17,18 +17,18 @@ function Item(name, modifier, description) {
 }
 function slap() {
     hits += 1;
-    health -= (1 + totalMods);
+    imDead(health -= (1 + totalMods));
     update()
     return
 }
 function kick() {
-    health -= (10 + totalMods);
+    imDead(health -= (10 + totalMods))
     hits += 1;
     update()
     return
 }
 function punch() {
-    health -= (5 + totalMods);
+   imDead(health -= (5 + totalMods));
     hits += 1;
     update()
     return
@@ -52,5 +52,8 @@ function addMods(){
     return totalMods
 }
 update();
-console.log(totalMods);
-console.log(bigBoss);
+function imDead(){
+    if(health <= 0){
+        health = 0
+    }
+}
