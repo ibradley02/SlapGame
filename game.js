@@ -17,18 +17,18 @@ function Item(name, modifier, description) {
 }
 function slap() {
     hits += 1;
-    health -= 1;
+    health -= (1 + totalMods);
     update()
     return
 }
 function kick() {
-    health -= 10;
+    health -= (10 + totalMods);
     hits += 1;
     update()
     return
 }
 function punch() {
-    health -= 5;
+    health -= (5 + totalMods);
     hits += 1;
     update()
     return
@@ -45,15 +45,17 @@ function giveItem(item) {
     bigBoss.items.push(item)
 }
 var totalMods = 0
-// function addMods(){
-//     for (var i = 0; i < bigBoss.items.length; i++) {
-//         var modValue = bigBoss.items.modifier[i];
-//         totalMods += modValue
-//     }
-//     return totalMods
-// }
+function addMods(){
+    for (var i = 0; i < bigBoss.items.length; i++) {
+        var modValue = bigBoss.items[i].modifier;
+        totalMods += modValue
+    }
+    return totalMods
+}
 update();
 giveItem(banana);
 giveItem(tnt);
 giveItem(barrel);
-console.log(bigBoss)
+addMods();
+console.log(totalMods);
+console.log(bigBoss);
