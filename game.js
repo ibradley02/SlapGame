@@ -38,11 +38,10 @@ function update() {
     document.getElementById('hits').innerText = hits
     document.getElementById('name').innerText = name
 }
-function giveBanana(banana) {
-    bigBoss.items.push(banana)
-}
 function giveItem(item) {
     bigBoss.items.push(item)
+    alert('You picked up an item! But is it enough?')
+    addMods()
 }
 var totalMods = 0
 function addMods(){
@@ -53,9 +52,5 @@ function addMods(){
     return totalMods
 }
 update();
-giveItem(banana);
-giveItem(tnt);
-giveItem(barrel);
-addMods();
 console.log(totalMods);
 console.log(bigBoss);
