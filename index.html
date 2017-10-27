@@ -1,26 +1,45 @@
 <html>
+
 <head>
 	<title>Slap Object Game</title>
 	<link rel="stylesheet" href="game.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
 </head>
+
 <body>
-	<header>
-		<span>Name:<span id="name">--</span></span>
-		<span> Health:<span id="health">--</span></span>
-		<span> Hits:<span id ='hits'>--</span></span></header>
-	
-	<img src="https://vignette.wikia.nocookie.net/fantendo/images/c/c6/King_K._Rool.png/revision/latest?cb=20091219173553" alt="KING K. ROOL">
-	<script src="game.js"></script>
-	<footer><button onclick="slap()">SLAP</button></footer>
-	<footer><button onclick="kick()">KICK</button></footer>
-	<footer><button onclick="punch()">PUNCH</button></footer>
-	<footer>
-		<div class="items">
-			<button onclick="giveItem(banana)">BANANA</button>
-			<button onclick="giveItem(tnt)">TNT</button>
-			<button onclick="giveItem(barrel)">BARREL</button>			
-		</div>
-	</footer>
+		<header>
+			<span>Name:
+				<span id="name">--</span>
+			</span>
+			<span> Health:
+				<span id="health">--</span>
+			</span>
+			<span> Hits:
+				<span id='hits'>--</span>
+			</span>
+		</header>
+		<img src="https://vignette.wikia.nocookie.net/fantendo/images/c/c6/King_K._Rool.png/revision/latest?cb=20091219173553" alt="KING K. ROOL">
+		<script src="game.js"></script>
+		<footer>
+			<button onclick="slap()">SLAP</button>
+		</footer>
+		<footer>
+			<button onclick="kick()">KICK</button>
+		</footer>
+		<footer>
+			<button onclick="punch()">PUNCH</button>
+		</footer>
+		<footer>
+			<button onclick="resetGlobalVar()">RESET</button>
+		</footer>
+		<footer>
+			<div class="items">
+				<button onclick="giveItem(banana)">BANANA</button>
+				<button onclick="giveItem(tnt)">TNT</button>
+				<button onclick="giveItem(barrel)">BARREL</button>
+			</div>
+		</footer>
 </body>
+
 </html>

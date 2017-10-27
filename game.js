@@ -2,8 +2,9 @@ var bigBoss = new Target(100, 'King K. Rool', 0)
 var banana = new Item('banana', 1, 'Yellow and Tasty? Must be the banana')
 var tnt = new Item('TNT', 1, 'Cause I\'m T.N.T. I\'m dynamite')
 var barrel = new Item('BARREL', 1, 'It\'s a barrel... and a missile?')
-var hits = 0
-var health = 100
+var totalMods = 0
+update(bigBoss);
+
 function Target(health, name, hits, items) {
     this.health = health
     this.name = name
@@ -16,44 +17,47 @@ function Item(name, modifier, description) {
     this.description = description
 }
 function slap() {
-    hits += 1;
-    imDead(health -= (1 + totalMods));
-    update()
+    bigBoss.hits += 1;
+    imDead(bigBoss.health -= (1 + totalMods));
+    update(bigBoss)
     return
 }
 function kick() {
-    imDead(health -= (10 + totalMods))
-    hits += 1;
-    update()
+    imDead(bigBoss.health -= (10 + totalMods))
+    bigBoss.hits += 1;
+    update(bigBoss)
     return
 }
 function punch() {
-   imDead(health -= (5 + totalMods));
-    hits += 1;
-    update()
+    imDead(bigBoss.health -= (5 + totalMods));
+    bigBoss.hits += 1;
+    update(bigBoss)
     return
 }
-function update() {
-    document.getElementById('health').innerText = health
-    document.getElementById('hits').innerText = hits
-    document.getElementById('name').innerText = name
+function update(target) {
+    document.getElementById('health').innerText = target.health
+    document.getElementById('hits').innerText = target.hits
+    document.getElementById('name').innerText = target.name
 }
 function giveItem(item) {
     bigBoss.items.push(item)
     alert('You picked up an item! But is it enough?')
     addMods()
 }
-var totalMods = 0
-function addMods(){
+function addMods() {
     for (var i = 0; i < bigBoss.items.length; i++) {
         var modValue = bigBoss.items[i].modifier;
         totalMods += modValue
     }
     return totalMods
 }
-update();
-function imDead(){
-    if(health <= 0){
-        health = 0
+function imDead() {
+    if (bigBoss.health <= 0) {
+        bigBoss.health = 0
     }
+}
+function resetGlobalVar(){
+    bigBoss = new Target(100, 'King K. Rool', 0)
+    totalMods = 0
+    update(bigBoss)
 }
