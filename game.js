@@ -2,8 +2,15 @@ var bigBoss = new Target(100, 'King K. Rool', 0)
 var banana = new Item('banana', 1, 'Yellow and Tasty? Must be the banana')
 var tnt = new Item('TNT', 1, 'Cause I\'m T.N.T. I\'m dynamite')
 var barrel = new Item('BARREL', 1, 'It\'s a barrel... and a missile?')
+var player = new Player(100, 'Donkey Kong', 0)
 var totalMods = 0
 update(bigBoss);
+function Player(health, name, hits, items){
+    this.playerHealth = playerHealth
+    this.playerName = playerName
+    this.playerHits = playerHits
+    this.items = []
+}
 function Target(health, name, hits, items) {
     this.health = health
     this.name = name

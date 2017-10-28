@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<div class="container">
+	<div class="container-fluid background">
 		<div class="row">
 			<div class="col-xs-6">
 				<header>
@@ -48,14 +48,17 @@
 				</footer>
 			</div>
 		</div>
+		<footer>
+			<div class="items btn-group">
+				<input onclick="giveItem(banana)" type="image" src="http://vignette3.wikia.nocookie.net/fantendo/images/3/37/Golden_Banana_SMW3D.png/revision/latest?cb=20120715031823"
+				name="submit" class="img-height"></input>
+				<input onclick="giveItem(tnt)" type="image" src="https://www.dkwiki.com/images/thumb/c/c1/TNT_Barrel_DK64.png/180px-TNT_Barrel_DK64.png"
+				name="submit" class="img-height"></input>
+				<input onclick="giveItem(barrel)" type="image" src="https://www.mariowiki.com/images/thumb/7/7d/DKBarrelDKCR.png/150px-DKBarrelDKCR.png"
+				name="submit" class="img-height"></input>
+			</div>
+		</footer>
 	</div>
-	<footer>
-		<div class="items btn-group">
-			<button onclick="giveItem(banana)">BANANA</button>
-			<button onclick="giveItem(tnt)">TNT</button>
-			<button onclick="giveItem(barrel)">BARREL</button>
-		</div>
-	</footer>
 	<script src="game.js"></script>
 </body>
 
