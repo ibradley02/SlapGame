@@ -1,1 +1,19 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
+.sameheight{
+    max-height: 200px
+}
+.btn-red{
+    background-color: red;
+    color: white
+}
+.btn-green{
+    background-color: green;
+    color: white
+}
+.btn-yellow{
+    background-color: yellow;
+}
+.btn-purple{
+    background-color: purple;
+    color: white
+}

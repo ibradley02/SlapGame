@@ -4,7 +4,6 @@ var tnt = new Item('TNT', 1, 'Cause I\'m T.N.T. I\'m dynamite')
 var barrel = new Item('BARREL', 1, 'It\'s a barrel... and a missile?')
 var totalMods = 0
 update(bigBoss);
-
 function Target(health, name, hits, items) {
     this.health = health
     this.name = name
@@ -23,14 +22,14 @@ function slap() {
     return
 }
 function kick() {
-    imDead(bigBoss.health -= (10 + totalMods))
     bigBoss.hits += 1;
+    imDead(bigBoss.health -= (10 + totalMods))
     update(bigBoss)
     return
 }
 function punch() {
-    imDead(bigBoss.health -= (5 + totalMods));
     bigBoss.hits += 1;
+    imDead(bigBoss.health -= (5 + totalMods));
     update(bigBoss)
     return
 }
@@ -53,11 +52,13 @@ function addMods() {
 }
 function imDead() {
     if (bigBoss.health <= 0) {
-        bigBoss.health = 0
+        bigBoss.health = 0;
+        alert('YOU HAVE DEFEATED KING K. ROOL')
+        resetGlobalVar()
     }
 }
 function resetGlobalVar(){
-    bigBoss = new Target(100, 'King K. Rool', 0)
-    totalMods = 0
-    update(bigBoss)
+    bigBoss = new Target(100, 'King K. Rool', 0);
+    totalMods = 0;
+    update(bigBoss);
 }
