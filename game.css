@@ -24,14 +24,7 @@
 }
 .background{
     color: white;
-    background: url(https://vignette.wikia.nocookie.net/donkeykong/images/e/ea/Jungle_background_GBA.PNG/revision/latest?cb=20120826212251) no-repeat center center fixed;
+    background: url(https://vignette.wikia.nocookie.net/donkeykong/images/4/4a/MonobookBG.jpg/revision/latest/scale-to-width-down/640?cb=20111205204753) no-repeat center center fixed;
     background-size: cover;
-    background-position: top;
-    height: 100vh;
-    width: auto;
-}
-.black-square{
-    background-color: black;
-    height: 20vh;
     width: auto;
 }
