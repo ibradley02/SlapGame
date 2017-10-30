@@ -1,7 +1,7 @@
 var bigBoss = new Target(100, 'King K. Rool', 0)
 var banana = new Item('banana', 1, 'Yellow and Tasty? Must be the banana')
-var tnt = new Item('TNT', 1, 'Cause I\'m T.N.T. I\'m dynamite')
-var barrel = new Item('BARREL', 1, 'It\'s a barrel... and a missile?')
+var tnt = new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite')
+var barrel = new Item('BARREL', 0.5, 'It\'s a barrel... and a missile?')
 var totalMods = 0
 update(bigBoss);
 function Target(health, name, hits, items) {
