@@ -22,13 +22,16 @@
 .img-height{
     max-height: 100px
 }
-body{
+.background{
+    color: white;
     background: url(https://vignette.wikia.nocookie.net/donkeykong/images/e/ea/Jungle_background_GBA.PNG/revision/latest?cb=20120826212251) no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    background-position: top;
     height: 100vh;
     width: auto;
 }
-.background{
-    color: white
+.black-square{
+    background-color: black;
+    height: 20vh;
+    width: auto;
 }
