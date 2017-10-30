@@ -28,3 +28,12 @@
     background-size: cover;
     width: auto;
 }
+.black-square{
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+    height: 5vh;
+}
+.red-text{
+    color: red;
+}

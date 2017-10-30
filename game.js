@@ -37,10 +37,11 @@ function update(target) {
     document.getElementById('health').innerText = target.health
     document.getElementById('hits').innerText = target.hits
     document.getElementById('name').innerText = target.name
+    document.getElementById('text-display').innerText = ''
 }
 function giveItem(item) {
     bigBoss.items.push(item)
-    alert('You picked up an item! But is it enough?')
+    document.getElementById('text-display').innerText = 'You picked an item, but is it enough?'
     addMods()
 }
 function addMods() {
@@ -53,7 +54,7 @@ function addMods() {
 function imDead() {
     if (bigBoss.health <= 0) {
         bigBoss.health = 0;
-        alert('YOU HAVE DEFEATED KING K. ROOL')
+        alert('YOU HAVE DEFEATED KING K. RULE')
         resetGlobalVar()
     }
 }
