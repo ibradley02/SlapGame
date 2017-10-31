@@ -19,6 +19,7 @@ function SlapController(){
         update()
     }
     this.reset = function reset(){
+        debugger
         slapService.reset()
         update()
     }
