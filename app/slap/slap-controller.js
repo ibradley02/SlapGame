@@ -8,8 +8,9 @@ function SlapController(){
         document.getElementById('name').innerText = target.name
         document.getElementById('text-display').innerText = ''
         if (target.health <= 0){
-            document.getElementById('text-display').innerText = 'YOU HAVE DEFEATED KING K. RULE!'
+            document.getElementById('text-display').innerText = 'YOU DEFEATED KING K. RULE!'
             target.health = 0
+            update()
         }
     }
     //PUBLIC PARTS
