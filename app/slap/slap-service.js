@@ -46,8 +46,8 @@ function SlapService(){
     this.giveItems = function giveItems(){
         return (JSON.parse(JSON.stringify(items)))
     }
-    this.reset = function resetGlobalVar(){
-        bigBoss = new Target(100, 'King K. Rool', 0);
+    this.reset = function reset(){
+       var bigBoss = new Target(100, 'King K. Rool', 0);
         totalMods = 0;
     }
 }
