@@ -1,20 +1,23 @@
-var bigBoss = new Target(100, 'King K. Rool', 0)
-var banana = new Item('banana', 1, 'Yellow and Tasty? Must be the banana')
-var tnt = new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite')
-var barrel = new Item('BARREL', 0.5, 'It\'s a barrel... and a missile?')
-totalMods = 0
-update(bigBoss);
-function Target(health, name) {
-    this.health = health
-    this.name = name
-    this.hits = 0
-    this.items = []
-}
-function Item(name, modifier, description) {
-    this.name = name
-    this.modifier = modifier
-    this.description = description
-}
+//SERVICE PRIVATE
+// var bigBoss = new Target(100, 'King K. Rool', 0)
+// var banana = new Item('banana', 1, 'Yellow and Tasty? Must be the banana')
+// var tnt = new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite')
+// var barrel = new Item('BARREL', 0.5, 'It\'s a barrel... and a missile?')
+// totalMods = 0
+
+//SERVICE
+// function Target(health, name) {
+//     this.health = health
+//     this.name = name
+//     this.hits = 0
+//     this.items = []
+// }
+// function Item(name, modifier, description) {
+//     this.name = name
+//     this.modifier = modifier
+//     this.description = description
+// }
+//UNSURE
 function slap() {
     bigBoss.hits += 1;
     (bigBoss.health -= (1 + totalMods));
@@ -30,24 +33,24 @@ function punch() {
     bigBoss.health -= (5 + totalMods)
     update(bigBoss)
 }
-function update(target) {
-    document.getElementById('health').innerText = target.health
-    document.getElementById('hits').innerText = target.hits
-    document.getElementById('name').innerText = target.name
-    document.getElementById('text-display').innerText = ''
-}
-function giveItem(item) {
-    bigBoss.items.push(item)
-    document.getElementById('text-display').innerText = 'You picked an item, but is it enough?'
-    addMods()
-}
-function addMods() {
-    for (var i = 0; i < bigBoss.items.length; i++) {
-        var modValue = bigBoss.items[i].modifier;
-        totalMods += modValue
-    }
-    return totalMods
-}
+// function update(target) {
+//     document.getElementById('health').innerText = target.health
+//     document.getElementById('hits').innerText = target.hits
+//     document.getElementById('name').innerText = target.name
+//     document.getElementById('text-display').innerText = ''
+// }
+// function giveItem(item) {
+//     bigBoss.items.push(item)
+//     document.getElementById('text-display').innerText = 'You picked an item, but is it enough?'
+//     addMods()
+// }
+// function addMods() {
+//     for (var i = 0; i < bigBoss.items.length; i++) {
+//         var modValue = bigBoss.items[i].modifier;
+//         totalMods += modValue
+//     }
+//     return totalMods
+// }
 function imDead() {
     if (bigBoss.health <= 0) {
         bigBoss.health = 0;
