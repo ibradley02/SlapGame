@@ -1,5 +1,6 @@
 function SlapController(){
     var slapService = new SlapService()
+    var items = slapService.giveItems()
     //PRIVATE PARTS
     function update() {
         var target = slapService.getTarget()
@@ -20,6 +21,10 @@ function SlapController(){
     }
     this.reset = function reset(){
         slapService.reset()
+        update()
+    }
+    this.giveItems = function giveItems(){
+        slapService.giveItems()
         update()
     }
     update()
