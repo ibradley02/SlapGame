@@ -47,7 +47,6 @@ function SlapService(){
         return (JSON.parse(JSON.stringify(items)))
     }
     this.reset = function reset(){
-        debugger
        var bigBoss = new Target(100, 'King K. Rool', 0);
         totalMods = 0;
     }
