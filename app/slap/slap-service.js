@@ -13,9 +13,9 @@ function SlapService(){
         this.name = name
         this.hits = 0
         this.attack = {
-            slap = slap,
-            punch = punch,
-            kick = kick
+            slap: slap,
+            punch: punch,
+            kick: kick
         }
         this.items = []
     }
