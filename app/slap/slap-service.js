@@ -33,7 +33,7 @@ function SlapService(){
     }
     
     //PUBLIC
-    this.attack = function attack(){
+    this.attack = function attack(type){
         if (bigBoss.attack[type]){
             bigBoss.health -= bigBoss.attack[type] * addMods()
             bigBoss.hits++
