@@ -17,17 +17,17 @@ function Item(name, modifier, description) {
 }
 function slap() {
     bigBoss.hits += 1;
-    imDead(bigBoss.health -= (1 + totalMods));
+    (bigBoss.health -= (1 + totalMods));
     update(bigBoss)
 }
 function kick() {
     bigBoss.hits += 1;
-    imDead(bigBoss.health -= (10 + totalMods))
+    (bigBoss.health -= (10 + totalMods))
     update(bigBoss)
 }
 function punch() {
     bigBoss.hits += 1;
-    imDead(bigBoss.health -= (5 + totalMods));
+    bigBoss.health -= (5 + totalMods)
     update(bigBoss)
 }
 function update(target) {
@@ -48,7 +48,7 @@ function addMods() {
     }
     return totalMods
 }
-function imDead(target) {
+function imDead() {
     if (bigBoss.health <= 0) {
         bigBoss.health = 0;
         alert('YOU HAVE DEFEATED KING K. RULE')
@@ -60,3 +60,4 @@ function resetGlobalVar(){
     totalMods = 0;
     update(bigBoss);
 }
+imDead()
