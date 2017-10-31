@@ -2,9 +2,9 @@ function SlapService(){
     //PRIVATE
     var bigBoss = new Target(100, 'King K. Rool', 0)
     var items = {
-        banana = new Item('banana', 1, 'Yellow and Tasty? Must be the banana'),
-        tnt = new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite'),
-        barrel = new Item('BARREL', 0.5, 'It\'s a barrel... and a missile?')
+        banana: new Item('banana', 1, 'Yellow and Tasty? Must be the banana'),
+        tnt: new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite'),
+        barrel: new Item('BARREL', 0.5, 'It\'s a barrel... and a missile?')
     }
     totalMods = 0
     
