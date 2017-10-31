@@ -18,5 +18,9 @@ function SlapController(){
         slapService.attack(type)
         update()
     }
+    this.reset = function reset(){
+        slapService.reset()
+        update()
+    }
     update()
 }

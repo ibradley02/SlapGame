@@ -18,21 +18,21 @@
 //     this.description = description
 // }
 //UNSURE
-function slap() {
-    bigBoss.hits += 1;
-    (bigBoss.health -= (1 + totalMods));
-    update(bigBoss)
-}
-function kick() {
-    bigBoss.hits += 1;
-    (bigBoss.health -= (10 + totalMods))
-    update(bigBoss)
-}
-function punch() {
-    bigBoss.hits += 1;
-    bigBoss.health -= (5 + totalMods)
-    update(bigBoss)
-}
+// function slap() {
+//     bigBoss.hits += 1;
+//     (bigBoss.health -= (1 + totalMods));
+//     update(bigBoss)
+// }
+// function kick() {
+//     bigBoss.hits += 1;
+//     (bigBoss.health -= (10 + totalMods))
+//     update(bigBoss)
+// }
+// function punch() {
+//     bigBoss.hits += 1;
+//     bigBoss.health -= (5 + totalMods)
+//     update(bigBoss)
+// }
 // function update(target) {
 //     document.getElementById('health').innerText = target.health
 //     document.getElementById('hits').innerText = target.hits
@@ -51,16 +51,15 @@ function punch() {
 //     }
 //     return totalMods
 // }
-function imDead() {
-    if (bigBoss.health <= 0) {
-        bigBoss.health = 0;
-        alert('YOU HAVE DEFEATED KING K. RULE')
-        resetGlobalVar()
-    }
-}
-function resetGlobalVar(){
-    bigBoss = new Target(100, 'King K. Rool', 0);
-    totalMods = 0;
-    update(bigBoss);
-}
-imDead()
+// function imDead() {
+//     if (bigBoss.health <= 0) {
+//         bigBoss.health = 0;
+//         alert('YOU HAVE DEFEATED KING K. RULE')
+//         resetGlobalVar()
+//     }
+// }
+// function resetGlobalVar(){
+//     bigBoss = new Target(100, 'King K. Rool', 0);
+//     totalMods = 0;
+//     update(bigBoss);
+// }
