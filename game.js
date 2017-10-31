@@ -4,10 +4,10 @@ var tnt = new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite')
 var barrel = new Item('BARREL', 0.5, 'It\'s a barrel... and a missile?')
 totalMods = 0
 update(bigBoss);
-function Target(health, name, hits, items) {
+function Target(health, name) {
     this.health = health
     this.name = name
-    this.hits = hits
+    this.hits = 0
     this.items = []
 }
 function Item(name, modifier, description) {
