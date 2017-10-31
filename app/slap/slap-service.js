@@ -1,6 +1,6 @@
 function SlapService(){
     //PRIVATE
-    var bigBoss = new Target(100, 'King K. Rool', 0)
+    var bigBoss = new Target(100, 'King K. Rool', 1, 5, 10)
     var items = {
         banana: new Item('banana', 1, 'Yellow and Tasty? Must be the banana'),
         tnt: new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite'),
