@@ -34,7 +34,6 @@ function SlapService(){
     
     //PUBLIC
     this.attack = function attack(type){
-        debugger
         if (bigBoss.attack[type]){
             bigBoss.health -= bigBoss.attack[type]
             bigBoss.hits++
