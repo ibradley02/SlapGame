@@ -30,4 +30,5 @@ function SlapController(){
         update()
     }
     update()
+    drawItems()
 }
