@@ -43,7 +43,7 @@ function SlapService(){
     this.getTarget = function getTarget(){
         return JSON.parse(JSON.stringify(bigBoss))
     }
-    this.getItems = function getItems(type){
+    this.getItems = function getItems(){
         return (JSON.parse(JSON.stringify(items)))
     }
     this.reset = function reset(){
