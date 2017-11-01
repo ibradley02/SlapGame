@@ -5,7 +5,7 @@ function SlapController(){
         var items = slapService.getItems()
         var template = ``
         for (var item in items) {
-            template += `<button type="button" class="btn" onclick="giveItem('` + item + `')">` + item + `</button>`
+            template += `<button type="button" class="btn btn-style" onclick="app.controllers.slapController.giveItem('` + item + `')">` + item + `</button>`
         }
         document.getElementById('items').innerHTML = template
     }
@@ -28,6 +28,9 @@ function SlapController(){
     this.reset = function reset(){
         slapService.reset()
         update()
+    }
+    this.giveItem = function giveItem(item){
+        slapService.getItems(item)
     }
     update()
     drawItems()

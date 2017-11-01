@@ -1,6 +1,14 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
+.btn-style{
+    border: 1px solid black;
+    color: white;
+    background-color: orange;
+}
 .img-logo{
-    height:15vh
+    height:15vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .bottom-row-height{
     height:20vh
@@ -33,19 +41,12 @@
     color: white;
     background: url(https://vignette.wikia.nocookie.net/donkeykong/images/4/4a/MonobookBG.jpg/revision/latest/scale-to-width-down/640?cb=20111205204753) no-repeat center center fixed;
     background-size: cover;
-    width: auto;
     height: 100%;
 }
 .green-background{
     color: white;
     background-color: #174405;
     border: 5px solid black;
-}
-.black-square{
-    color: white;
-    background-color: black;
-    border: white 1px solid;
-    height: 100%;
 }
 .red-text{
     color: #fd1e33;
