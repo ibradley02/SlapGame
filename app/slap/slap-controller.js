@@ -1,7 +1,14 @@
 function SlapController(){
     var slapService = new SlapService()
-    var items = slapService.giveItems()
     //PRIVATE PARTS
+    function drawItems() {
+        var items = slapService.getItems()
+        var template = ``
+        for (var item in items) {
+            template += `<button type="button" class="btn" onclick="giveItem('` + item + `')">` + item + `</button>`
+        }
+        document.getElementById('items').innerHTML = template
+    }
     function update() {
         var target = slapService.getTarget()
         document.getElementById('health').innerText = target.health
@@ -11,7 +18,6 @@ function SlapController(){
         if (target.health <= 0){
             document.getElementById('text-display').innerText = 'YOU DEFEATED KING K. RULE!'
             document.getElementById('health').innerText = 0
-            update()
         }
     }
     //PUBLIC PARTS
@@ -21,10 +27,6 @@ function SlapController(){
     }
     this.reset = function reset(){
         slapService.reset()
-        update()
-    }
-    this.giveItems = function giveItems(){
-        slapService.giveItems()
         update()
     }
     update()

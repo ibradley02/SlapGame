@@ -1,12 +1,12 @@
 function SlapService(){
     //PRIVATE
-    var bigBoss = new Target(100, 'King K. Rool', 1, 5, 10)
-    var items = {
+    let bigBoss = new Target(100, 'King K. Rool', 1, 5, 10)
+    let items = {
         banana: new Item('banana', 1, 'Yellow and Tasty? Must be the banana'),
         tnt: new Item('TNT', 10, 'Cause I\'m T.N.T. I\'m dynamite'),
         barrel: new Item('BARREL', 0.5, 'It\'s a barrel... and a missile?')
     }
-    totalMods = 0
+    let totalMods = 0
     
     function Target(health, name, slap, punch, kick) {
         this.health = health
@@ -41,13 +41,13 @@ function SlapService(){
 
     }
     this.getTarget = function getTarget(){
-        return (JSON.parse(JSON.stringify(bigBoss)))
+        return JSON.parse(JSON.stringify(bigBoss))
     }
-    this.giveItems = function giveItems(){
+    this.getItems = function getItems(type){
         return (JSON.parse(JSON.stringify(items)))
     }
     this.reset = function reset(){
-       var bigBoss = new Target(100, 'King K. Rool', 0);
+        bigBoss = new Target(100, 'King K. Rool', 1, 5, 10);
         totalMods = 0;
     }
 }

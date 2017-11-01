@@ -31,21 +31,14 @@
 			</div>
 			<div class="col-xs-6 black-square">
 				<p id="text-display" class="text-center"></p>
+				<footer>
+					<div class="items"></div>
+					<div class="pull-right bottomright">
+						<button class="btn-red" onclick="app.controllers.slapController.reset()">RESET</button>
+					</div>
+				</footer>
 			</div>
 		</div>
-		<footer>
-			<div class="items btn-group">
-				<input onclick="app.controllers.giveItem(banana)" type="image" src="https://www.mariowiki.com/images/thumb/7/7b/Banana_Coin_-_Donkey_Kong_Country_Tropical_Freeze.png/200px-Banana_Coin_-_Donkey_Kong_Country_Tropical_Freeze.png"
-				 name="submit" class="img-height"></input>
-				<input onclick="giveItem(tnt)" type="image" src="https://www.dkwiki.com/images/thumb/c/c1/TNT_Barrel_DK64.png/180px-TNT_Barrel_DK64.png"
-				 name="submit" class="img-height"></input>
-				<input onclick="giveItem(barrel)" type="image" src="https://www.mariowiki.com/images/thumb/7/7d/DKBarrelDKCR.png/150px-DKBarrelDKCR.png"
-				 name="submit" class="img-height"></input>
-			</div>
-			<div class="pull-right">
-				<button class="btn-red" onclick="app.controllers.slapController.reset()">RESET</button>
-			</div>
-		</footer>
 	</div>
 	<!-- SERVICE -->
 	<script src="app/slap/slap-service.js"></script>
