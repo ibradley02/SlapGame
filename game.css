@@ -1,6 +1,12 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
-.sameheight{
-    max-height: 200px
+.img-logo{
+    height:15vh
+}
+.top-row-height{
+    height:20vh
+}
+.row-height{
+    height:40vh
 }
 .btn-red{
     background-color: red;
@@ -21,13 +27,14 @@
     border: none;
 }
 .img-height{
-    max-height: 100px
+    max-height: 150px
 }
 .background{
     color: white;
     background: url(https://vignette.wikia.nocookie.net/donkeykong/images/4/4a/MonobookBG.jpg/revision/latest/scale-to-width-down/640?cb=20111205204753) no-repeat center center fixed;
     background-size: cover;
     width: auto;
+    height: 100%;
 }
 .black-square{
     color: white;
